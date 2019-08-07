@@ -34,8 +34,8 @@ class views_date_format_sql_handler_date_field extends views_handler_field_field
       return;
     }
 
-    $format_type = $this->options['settings']['format_type'];
-    $format_string = $this->options['settings']['custom_date_format'];
+    $format_type = isset($this->options['settings']['format_type']) ? $this->options['settings']['format_type'] : '';
+    $format_string = isset($this->options['settings']['custom_date_format']) ? $this->options['settings']['custom_date_format'] : '';
     $format_string = _views_date_format_sql_get_date_format($format_type, $format_string);
     $field_type = ($this->field_info['type'] == 'datestamp') ? 'int' : $this->field_info['type'];
 
