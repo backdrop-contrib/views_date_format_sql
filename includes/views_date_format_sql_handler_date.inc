@@ -34,7 +34,7 @@ class views_date_format_sql_handler_date extends views_handler_field_date {
     }
     $this->ensure_my_table();
     // Add the field.
-    $params = $this->options['group_type'] != 'group' ? array('function' => $this->options['group_type']) : array();
+    $params = $this->options['group_type'] != 'group'?array('function' => $this->options['group_type']) : array();
 
     $format = $this->options['date_format'];
     $custom_format = $this->options['custom_date_format'];
